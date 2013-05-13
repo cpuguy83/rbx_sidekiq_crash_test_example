@@ -4,6 +4,6 @@ namespace :sidekiq do
   end
 
   task :queue_jobs => :environment do
-    1000.times do { TestWorker.perform_async }
+    1000.times { TestWorker.perform_async }
   end
 end
